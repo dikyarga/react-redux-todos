@@ -5,9 +5,7 @@ const initialState = []
 const todoReducer = (state = initialState, action) => {
   switch (action.type) {
     case ActionTypes.GET_TODOS:
-      return Object.assign({}, state, {
-        todos: action.payload
-      })
+      return action.payload
     default:
       return state
   }

@@ -13,7 +13,7 @@ class TodoList extends React.Component {
 
   componentDidMount() {
     this.props.fetchTodos()
-    setTimeout(function(){ console.log("keliuar", this.props.todos); }, 3000);
+    setTimeout(function(){ console.log("keliuar",  this.props.todos); }, 3000);
   }
 
   render(){
@@ -33,7 +33,7 @@ class TodoList extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('jalan cuk', state);
+  console.log('jalan cuy', state);
   return {
     todos: state.todos
   }
