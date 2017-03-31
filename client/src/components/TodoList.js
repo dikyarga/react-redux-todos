@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { getTodos, fetchTodos } from '../actions'
+import { fetchTodos } from '../actions'
 
 class TodoList extends React.Component {
   constructor(){
@@ -13,7 +13,6 @@ class TodoList extends React.Component {
 
   componentDidMount() {
     this.props.fetchTodos()
-    setTimeout(function(){ console.log("keliuar",  this.props.todos); }, 3000);
   }
 
   render(){

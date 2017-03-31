@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TodoList from './components/TodoList'
+import AddTodo from './components/AddTodo'
 
 class App extends Component {
   render() {
@@ -14,6 +15,8 @@ class App extends Component {
         </div>
         <p className="App-intro">
           Tulis, kerjakan, selesai.
+          <AddTodo/>
+          <br/>
           <TodoList/>
         </p>
       </div>

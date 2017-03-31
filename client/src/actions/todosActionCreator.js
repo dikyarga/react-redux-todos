@@ -17,3 +17,24 @@ export const fetchTodos = () => {
     })
   }
 }
+
+export const addTodo = results => ({
+  type: ActionTypes.ADD_TODO,
+  payload: results
+})
+
+export const addTodoApi = (todo) => {
+  console.log('isi tood : ', todo);
+  return (dispatch) => {
+    axios.post(hostEndPoint, {
+      title: todo,
+      completed: false,
+      createdAt: new Date()
+    }).then((response) => {
+      console.log(response);
+      dispatch(addTodo(response.data))
+    }).catch((err) => {
+      console.log('error when trying to add todo : ', err);
+    })
+  }
+}
